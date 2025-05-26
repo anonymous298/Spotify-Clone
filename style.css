@@ -60,9 +60,16 @@ nav .nav-inner-primary-container .search-portion {
 }
 
 nav .nav-inner-primary-container .search-portion .search-home {
-    background-color: rgba(60, 60, 60, 0.834);
+    background-color: rgb(34, 34, 34);
     padding: 10px;
     border-radius: 50%;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+nav .nav-inner-primary-container .search-portion .search-home:hover {
+    transform: scale(1.08);
+    background-color: rgb(64, 64, 64);
 }
 
 nav .nav-inner-primary-container .search-portion .search-home img {
@@ -74,7 +81,7 @@ nav .nav-inner-primary-container .search-portion .search-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(60, 60, 60, 0.834);
+    background-color: rgb(34, 34, 34);
     padding: 6px 10px;
     border-radius: 30px;
     gap: 15px;
@@ -121,6 +128,27 @@ nav .nav-inner-primary-container .search-portion .search-container input:focus {
 
 nav .nav-inner-primary-container .search-portion .search-container input::placeholder {
     color: rgb(203, 203, 203);
+}
+
+nav .nav-inner-primary-container .search-portion .secondary-search {
+    background-color: rgba(60, 60, 60, 0.834);
+    padding: 10px;
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+nav .nav-inner-primary-container .search-portion .secondary-search img {
+    width: 23px;
+    cursor: pointer;
+}
+
+nav .nav-inner-primary-container .search-portion .secondary-search {
+    display: none;
+}
+
+nav .nav-inner-primary-container .search-portion .secondary-search.show {
+    display: block;
 }
 
 nav .nav-inner-secondary-container {
@@ -228,6 +256,16 @@ nav .nav-inner-secondary-container .login-portion .signup-container button:last-
 
 }
 
+nav .hamburger {
+    display: none;
+    padding: 0px 15px;
+}
+
+nav .hamburger img {
+    width: 40px;
+    cursor: pointer;
+}
+
 main {
     height: 89dvh;
     /* background-color: darkcyan; */
@@ -248,20 +286,51 @@ main aside {
     /* height: 88vh; */
     /* min-height: 80%; */
     border-radius: 10px;
-    background-color: rgba(47, 47, 47, 0.834);
-    /* background-color: rgba(21, 21, 21, 0.834); */
+    /* background-color: rgba(26, 26, 26, 0.834); */
+    background-color: rgb(19, 19, 19);
     height: 89dvh;
 }
 
 aside .aside-text {
     /* background-color: saddlebrown; */
-    background-color: rgba(39, 39, 39, 0.834);
+    /* background-color: rgba(26, 26, 26, 0.834); */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px 10px;
-    height: 10%;
+    /* height: 10%; */
     border-radius: 10px;
+    padding: 0 20px;
+}
+
+/* aside .aside-text .aside-primary {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+} */
+
+
+
+aside .aside-text .aside-primary .aside-inner-text{
+    display: flex;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+aside .aside-text .aside-primary .aside-inner-text.show {
+    flex-direction: row;
+}
+
+aside .aside-text .aside-primary .aside-home-links {
+    display: flex;
+    gap: 30px;
+    margin: 30px 0px;
+}
+
+
+aside .aside-text .aside-primary .aside-home-links img {
+    width: 38px;
+    cursor: pointer;
 }
 
 aside .aside-text h3 {
@@ -283,7 +352,7 @@ aside .aside-text img:hover {
 
 aside .aside-content {
     /* background-color: darkcyan; */
-    background-color: rgba(39, 39, 39, 0.834);
+    /* background-color: rgba(26, 26, 26, 0.834); */
     height: 40%;
     /* padding: 50px; */
     overflow: hidden auto;
@@ -300,7 +369,7 @@ aside .aside-content .aside-inner-content {
     flex-direction: column;
     align-items: self-start;
     /* gap: 15px; */
-    background-color: rgba(76, 76, 76, 0.834);
+    background-color: rgba(32, 32, 32, 0.834);
     padding: 20px;
     border-radius: 12px;
 }
@@ -328,6 +397,13 @@ aside .aside-content .aside-inner-content button {
     font-size: 14px;
     border: none;
     border-radius: 30px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+aside .aside-content .aside-inner-content button:hover {
+    background-color: rgba(255, 255, 255, 0.782);
+    transform: scale(1.03);
 }
 
 aside .aside-footer {
@@ -380,7 +456,7 @@ aside .aside-footer .aside-footer-button {
     display: flex;
     gap: 10px;
     padding: 10px 15px;
-    border: 1px solid white;
+    border: 1px solid rgb(141, 141, 141);
     background-color: transparent;
     border-radius: 30px;
     font-family: "Inter", sans-serif;
@@ -388,18 +464,108 @@ aside .aside-footer .aside-footer-button {
     color: white;
     font-size: 13px;
     cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+aside .aside-footer .aside-footer-button:hover {
+    transform: scale(1.05);
+    border-color: white;
+}
+
+main aside.show {
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100dvh;
+}
+
+main aside .aside-text .close {
+    width: 30px;
+    display: none;
+}
+
+main aside .aside-text .close.show {
+    display: block !important;
 }
 
 
 main section {
     width: 80vw;
-    background-color: silver;
+    background-color: rgb(19, 19, 19);
     height: 89dvh;
     border-radius: 10px;
 }
 
 @media only screen and (max-width: 1250px) {
     nav .nav-inner-secondary-container .nav-links {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1025px) {
+    nav .nav-inner-primary-container .search-portion .search-container {
+        display: none;
+    }
+
+    main aside {
+        width: 25vw;
+    }
+
+    main section {
+        width: 75vw;
+    }
+
+    nav .nav-inner-primary-container .search-portion .secondary-search {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    aside .aside-text .aside-primary .aside-inner-text {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    nav .nav-inner-primary-container  {
+        display: none;
+    }
+
+    nav .nav-inner-secondary-container .login-portion .install-button {
+        display: none;
+    }
+
+    nav .hamburger {
+        display: block;
+    }
+
+    main aside {
+        display: none;
+        /* position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 100dvh; */
+        border-radius: 0px;
+        overflow-y: auto;
+        background-color: rgb(19, 19, 19);
+    }
+
+    /* aside .aside-text {
+        background-color: rgb(41, 41, 41);
+    }
+
+    aside .aside-content {
+        background-color: rgb(41, 41, 41);
+    } */
+
+    main section {
+        width: 100vw;
+    }
+}
+
+@media only screen and (min-width: 540px) {
+    aside .aside-text .aside-primary .aside-home-links {
         display: none;
     }
 }
