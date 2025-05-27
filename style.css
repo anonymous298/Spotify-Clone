@@ -288,7 +288,7 @@ main aside {
     border-radius: 10px;
     /* background-color: rgba(26, 26, 26, 0.834); */
     background-color: rgb(19, 19, 19);
-    height: 89dvh;
+    min-height: 89dvh;
 }
 
 aside .aside-text {
@@ -493,13 +493,67 @@ main aside .aside-text .close.show {
 main section {
     width: 80vw;
     background-color: rgb(19, 19, 19);
-    height: 89dvh;
+    min-height: 89dvh;
     border-radius: 10px;
+}
+
+section .section-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 80px 30px;
+}
+
+section .section-container h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+section .section-container .container-inner-cards-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+}
+
+section .section-container .container-inner-cards-container .card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 13vw;
+}
+
+.section-container .container-inner-cards-container .card img {
+    border-radius: 10px;
+}
+
+.section-container .container-inner-cards-container .card h4 {
+    font-family: "Instrument Sans", sans-serif;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.section-container .container-inner-cards-container .card p {
+    color: rgb(179, 179, 179);
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5em;
 }
 
 @media only screen and (max-width: 1250px) {
     nav .nav-inner-secondary-container .nav-links {
         display: none;
+    }
+
+    section .section-container .container-inner-cards-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    section .section-container .container-inner-cards-container .card {
+        width: 17vw;
     }
 }
 
@@ -518,6 +572,14 @@ main section {
 
     nav .nav-inner-primary-container .search-portion .secondary-search {
         display: block;
+    }
+
+    section .section-container .container-inner-cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    section .section-container .container-inner-cards-container .card {
+        width: 30vw;
     }
 }
 
@@ -561,6 +623,27 @@ main section {
 
     main section {
         width: 100vw;
+    }
+
+    section .section-container .container-inner-cards-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    section .section-container .container-inner-cards-container .card {
+        width: 85vw;
+        gap: 15px;
+    }
+
+    section .section-container h2 {
+        font-size: 35px;
+    }
+
+    .section-container .container-inner-cards-container .card h4 {
+        font-size: 28px;
+    }
+
+    .section-container .container-inner-cards-container .card p {
+        font-size: 20px;
     }
 }
 
