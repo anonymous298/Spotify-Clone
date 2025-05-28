@@ -519,6 +519,8 @@ section .section-container .container-inner-cards-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 0px;
+    align-items: center;
+    justify-items: center;
 }
 
 section .section-container .container-inner-cards-container .card {
@@ -538,6 +540,7 @@ section .section-container .container-inner-cards-container .card:hover {
 
 .section-container .container-inner-cards-container .card img {
     border-radius: 10px;
+    object-fit: cover;
 }
 
 .section-container .container-inner-cards-container .card h4 {
