@@ -877,6 +877,10 @@ audio {
     aside .aside-text img {
         width: 13px;
     } */
+
+    .music-player {
+        flex-direction: column;
+    }
 }
 
 @media only screen and (max-width: 540px) {
