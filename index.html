@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="assets/spotify-logo.png" />
 </head>
+
 <body>
     <header>
         <nav>
@@ -21,7 +23,7 @@
                         <input type="text" placeholder="What do you want to play?">
                         <img src="assets/browse-nav.png" alt="icon">
                     </div>
-                    
+
                     <div class="secondary-search">
                         <img src="assets/search-nav.png" alt="icon">
                     </div>
@@ -114,75 +116,12 @@
             <div class="section-container">
                 <h2>Trending songs</h2>
 
+
                 <div class="container-inner-cards-container">
-                    <div class="card">
-                        <div class="image-portion">
-                            <img src="assets/card-img1.jpg" alt="image">
-
-                            <div class="play-button">
-                                <img src="assets/play.png" alt="play">
-                            </div>
-                        </div>
-
-                        <h4>STFU</h4>
-                        <p>AP Dhillon, Shinda Kahlon</p>
-                    </div>
-
-                    <div class="card">
-                        <div class="image-portion">
-                            <img src="assets/card-img2.jpg" alt="image">
-
-                            <div class="play-button">
-                                <img src="assets/play.png" alt="play">
-                            </div>
-                        </div>
-
-                        <h4>LUNA BALA</h4>
-                        <p>Luna bala</p>
-                    </div>
-
-                    <div class="card">
-                        <div class="image-portion">
-                            <img src="assets/card-img3.png" alt="image">
-
-                            <div class="play-button">
-                                <img src="assets/play.png" alt="play">
-                            </div>
-                        </div>
-
-                        <h4>LOS VOLTAGE</h4>
-                        <p>AP Dhillon, Shinda Kahlon</p>
-                    </div>
-                    
-                    <div class="card">
-                        <div class="image-portion">
-                            <img src="assets/card-img4.png" alt="image">
-
-                            <div class="play-button">
-                                <img src="assets/play.png" alt="play">
-                            </div>
-                        </div>
-
-                        <h4>Passo Bem Solto</h4>
-                        <p>AP Dhillon, Shinda Kahlon</p>
-                    </div>
-
-                    <div class="card">
-                        <div class="image-portion">
-                            <img src="assets/card-img5.png" alt="image">
-
-                            <div class="play-button">
-                                <img src="assets/play.png" alt="play">
-                            </div>
-                        </div>
-
-                        <h4>Gravitational Forces (SLOWED) </h4>
-                        <p>AP Dhillon, Shinda Kahlon</p>
-                    </div>
 
                 </div>
             </div>
-            
+
             <footer class="section-footer">
                 <div class="primary-footer">
                     <div class="footer-links">
@@ -192,7 +131,7 @@
                             <p>Jobs</p>
                             <p>For the Record</p>
                         </div>
-                        
+
                         <div class="footer-links-card">
                             <h4>Communitites</h4>
                             <p>For Artists</p>
@@ -231,15 +170,44 @@
 
         </section>
     </main>
-    
-    <div class="playbar">
+
+    <!-- <div class="playbar">
         <div class="playbar-controls">
-            <img src="assets/previous.png" alt="icon">
-            <img src="assets/play.png" alt="icon">
-            <img src="assets/next.png" alt="icon">
+        </div>
+    </div> -->
+
+    <div class="music-player">
+        <div class="song-info">
+            <img src="assets/default-cover.jpg" alt="cover" id="playerCover">
+            <div>
+                <h4 id="playerTitle">Title</h4>
+                <p id="playerDescription">Description</p>
+            </div>
+        </div>
+
+        <div class="player-controls">
+            <div class="buttons">
+                <!-- <button id="previousButton">⏮️</button>
+                <button id="playButton">▶️</button>
+                <button id="nextButton">⏭️</button> -->
+                <img src="assets/previous.png" alt="icon" id="previousButton">
+                <img src="assets/play.png" alt="icon" id="playButton">
+                <img src="assets/next.png" alt="icon" id="nextButton">
+            </div>
+
+            <div class="seekbar">
+                <span id="currentTime">0:00</span>
+                <input type="range" id="progressBar" value="0" min="0">
+                <span id="totalTime">0:00</span>
+            </div>
+        </div>
+
+        <div class="volume-control">
+            <input type="range" id="volumeBar" min="0" max="1" step="0.01" value="1">
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
