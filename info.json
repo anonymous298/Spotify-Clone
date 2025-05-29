@@ -1,0 +1,22 @@
+{
+    "song1" : { 
+        "title" : "Los Volatage",
+        "description" : "Good Phonk",
+        "cover" : "covers/cover1.png",
+        "song" : "songs/los_voltage.mp3"
+    },
+
+    "song2" : { 
+        "title" : "Luna Bala",
+        "description" : "Good Phonk",
+        "cover" : "covers/cover2.jpg",
+        "song" : "songs/luna_bala.mp3"
+    },
+
+    "song3" : { 
+        "title" : "Gravitational Forces (SLOWED)",
+        "description" : "Good Phonk",
+        "cover" : "covers/cover3.png",
+        "song" : "songs/graviational_forces.mp3"
+    }
+}
