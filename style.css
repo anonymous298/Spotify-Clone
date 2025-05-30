@@ -117,13 +117,13 @@ nav .nav-inner-primary-container .search-portion .search-container:hover  {
 
 /* nav .nav-inner-primary-container .search-portion .search-container:focus {
     border: 1px solid white;
-} */
-
-nav .nav-inner-primary-container .search-portion .search-container img {
-    width: 23px;
-    cursor: pointer;
-}
-
+    } */
+    
+    nav .nav-inner-primary-container .search-portion .search-container img {
+        width: 23px;
+        cursor: pointer;
+    }
+    
 nav .nav-inner-primary-container .search-portion .search-container input {
     padding: 8px 180px 8px 0px;
     /* width: 420px; */
@@ -136,10 +136,10 @@ nav .nav-inner-primary-container .search-portion .search-container input {
 }
 
 nav .nav-inner-primary-container .search-portion .search-container input:focus {
-  outline: none;
-  border: none;
-  box-shadow: none;
-  /* border: 1px solid white; */
+    outline: none;
+    border: none;
+    box-shadow: none;
+    /* border: 1px solid white; */
 }
 
 nav .nav-inner-primary-container .search-portion .search-container input::placeholder {
@@ -269,7 +269,7 @@ nav .nav-inner-secondary-container .login-portion .signup-container button:last-
 nav .nav-inner-secondary-container .login-portion .signup-container button:last-child:hover {
     background-color: rgb(205, 205, 205);
     transform: scale(1.03);
-
+    
 }
 
 nav .hamburger {
@@ -308,6 +308,8 @@ main aside {
     /* height: 89dvh; */
     height: 79dvh;
     overflow-y: auto;
+    position: relative;
+    z-index: 100;
 }
 
 main aside::-webkit-scrollbar {
@@ -792,6 +794,7 @@ audio {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    width: 100%;
 }
 
 .player-controls .buttons {
@@ -809,11 +812,24 @@ audio {
     display: flex;
     align-items: center;
     gap: 10px;
+    width: 100%;
 }
 
 .seekbar input[type=range] {
     width: 300px;
     accent-color: #1db954;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.volume-control img {
+    filter: invert(1);
+
 }
 
 .volume-control input[type=range] {
@@ -880,6 +896,10 @@ audio {
 
     .music-player {
         flex-direction: column;
+    }
+
+    .player-controls .seekbar {
+        width: 1%;
     }
 }
 
